@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+<link rel="icon" type="image/png" href="assets/icons8-basket-64.png">
+  
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Matemasie&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <title>ESSENCE</title>
+  <style>
+:root {
+  --primary: #008200;          /* your navbar green */
+  --primary-dark: #004526;
+
+  --text-on-primary: #ffffff;   /* white text on green navbar */
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #6e6e6e;
+
+  --bg: #f9f9f9;
+  --bg-card: #ffffff;
+  --bg-subtle: #f0f0f0;
+  --border: #d0d0d0;
+
+  --accent: #00b0ff;           /* bright blue – clean/fresh feel */
+  --success: #2ecc71;
+  --warning: #f1c40f;
+  --danger: #e74c3c;
+}
+
+
+
+
+
+    *{font-family:'open-sans', sans-serif !important;}
+    nav{
+      
+      padding-top: 0 !important;
+
+
+;}
+   nav .container-fluid{background:  var(--primary-dark); margin-top: 0 !important; padding-top: 0 !important;}
+ nav   .navbar-brand {
+  transition: 0.4s ease-in-out; 
+}
+nav   .navbar-brand:hover {
+transform: translate(25px);
+
+}
+nav li.nav-item{
+  text-transform:capitalize !important;
+}
+
+    body{
+       background-color: var(--text-on-primary); 
+    }
+    .section-padding{padding: 100px 0;}
+
+.carousel-caption{z-index:2;}
+.carousel-caption h5{font-size: 40px;
+letter-spacing: 2px;}
+.carousel-caption p{
+  width: 60%;
+  font-size: 20px;
+  line-height: 1.8;
+  margin:auto;
+  text-transform: capitalize;
+  color: #FFF;
+}
+.carousel-caption .btn{
+  background-color: var(--primary-dark) !important;}
+.about-text .btn{background-color:var(--primary-dark); font-weight: 700;}
+    .navbar-nav li {margin-right:1rem}
+    .navbar-nav li a{transition: .3s  ease-in color; letter-spacing: 2px;
+    padding-bottom: 0 !important;
+}
+.essence_logo{
+
+
+text-decoration: none;
+color: var(--text-on-primary);
+font-size: 1.5em;
+/* font-family:"Matemasie", sans-serif;; */
+font-weight: 800; 
+ line-height: 3;
+  letter-spacing: 2px
+
+}
+
+/* Optional: subtle accent for youthfulness */
+.essence_logo span {
+color: var(--warning);
+}
+.navbar-nav li a:hover{
+color: rgba(188, 185, 185, 0.735);
+border-bottom: 1px solid silver;
+}
+    .carousel-caption h5{text-transform: uppercase;}
+    .carousel-caption{height: 300px;}
+
+    .carousel-inner::before{
+      content:'';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.668);
+      z-index: 1;
+    }
+
+.book_pickup{
+  z-index: 10;
+}
+
+    @media screen and (max-width: 760px) {
+ .navbar-nav {
+    text-align: center !important;
+  }
+  .navbar-nav a{
+    display: inline-block;
+}
+.carousel-caption h5{font-size: 25px;
+letter-spacing: 0;}
+.carousel-caption p{width: 100%;
+font-size: 1.2rem;
+line-height: 1.1;}
+}
+
+.about-text .display-6, #our-services,.our-projects{color: var(--primary)}
+
+.card-body .card-body-btn{background-color:var(--text-on-primary) !important;
+transition: all .3s;}
+.fuse-box-btn{background-color: var(--primary-dark) !important;}
+.card-body .card-body-btn:hover{background-color: var(--primary-dark);}
+#services .card{border: none !important; background-color: var(--primary-dark);}
+#pricing .card-body{
+  background-color: var(--warning);
+}
+
+#pricing .book_pickup{
+ text-decoration: none;
+ color: var(--text-on-primary); 
+ margin: 0;
+ padding: 0;
+
+}
+#pricing .card-body btn{
+  background-color: var(--primary-dark);
+}
+#pricing .card-body ul, #pricing .card-body ol {
+  text-align: left;
+}
+#pricing .card-body button:hover{
+  color: var(--primary-dark);
+  background-color: var(--text-on-primary) !important;
+  transition: all ease-in-out .3s;
+}
+#pricing .card-body a:hover{
+ /* 
+  background-color: var(--text-on-primary) !important;
+  transition: all ease-in-out .3s; */
+  color: var(--primary-dark);
+}
+
+
+#pricing .card-title_pricing button {background-color: var(--primary-dark) !important;
+color: var(--text-on-primary);}
+#services .card-body i{font-size: 4rem;}
+
+.fuse-box-h3{color: var(--primary-dark);}
+
+.our-projects-img{height: 200px; width: 200px; cursor: pointer;}
+
+
+/* to customarily set the desired properties for paragraph at a large screen size, */
+@media screen and (min-width: 1000px){
+  .our-projects-card p{
+  height: 10rem;
+  font-weight: 400; 
+  font-size: 1.2rem;
+}
+}
+#contact{padding:0}
+  #contact .container{background-color: var(--primary-dark);}
+  #contact ::placeholder {color: var(--text-primary);
+  font-weight: bold;}
+
+  #contact  button{color: #586c56;
+  text-transform: uppercase;
+}
+
+
+@media screen and (min-width: 980px){
+  footer{
+    min-height: auto !important;
+}
+  .footer_div >*{min-height:300px !important;
+  }
+}
+
+
+
+#footer-section{background-color:var(--primary-dark);
+margin-top: 0 !important;
+padding-top: 0 !important;}
+.footer_div h3{
+  color: white;
+        text-transform: uppercase;
+        font-size: 1rem;
+    font-weight: 600;
+font-family: Arial, Helvetica, sans-serif;
+text-decoration: underline;
+cursor: pointer;}
+footer .sub_section ul li{ 
+ transition: .3s ease-out;}
+footer .sub_section ul li:hover{
+color: white;
+text-decoration: underline;
+
+}
+footer .sub_section ul{
+  display: flex; 
+
+flex-direction: column; 
+justify-content: space-evenly;
+height: 100%;
+/* background-color:#b3b3b3;  */
+list-style-type: none;
+margin: 0;
+cursor: pointer;
+padding: 0;
+font-size: .9rem;
+font-weight: bold;
+color: var(--text-primary);
+}
+.copyright{color:var(--text-on-primary);}
+.keepInTouch-Div, .keepInTouch-Div >*{
+
+  height:100%;
+}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg  mb-5 fixed-top">
+    <div class="container-fluid ">
+      <a class="navbar-brand essence_logo" href="#">
+        <!-- an image logo wich could serve as the home screen link -->
+        <!-- <img src="assets/essence_logo.png" alt="" height="50px"> -->
+
+      ess<span>ence</span> 
+       </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold ">
+          <li class="nav-item ">
+            <a class="nav-link active text-light" aria-current="page" href="https://wa.me/2348133352912">Book Pickup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" target="_blank" href="https://wa.me/2348133352912">My account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#pricing">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#contact">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">FAQ</a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!--Carousel Section begins here-->
+
+<div id="carouselExampleCaptions" class="carousel slide  col-lg-12 mx-auto my-5">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner ">
+    <div class="carousel-item active">
+      <img src="assets/jane_pics.png" class="d-block mx-auto col-lg-9" height="500px" alt="..." object-fit
+      >
+      <div class="carousel-caption d-flex  flex-column justify-content-evenly">
+        <!-- <h5>STRESS-FREE LAUNDRY FOR CAMPUS LIFE</h5>
+        <p>Essence Laundry Services provides fast, affordable, and reliable laundry solutions for Rivers State University students, hostels, and offices. We pick up your dirty clothes, clean them with eco-friendly detergents, and deliver them fresh — so you can focus on your studies and work.</p> -->
+        <p><a target="_blank" href="https://wa.me/2348133352912" class="btn mt-3 btn-large text-white fw-bold book_pickup" > Book a Pickup</a>
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/student_laundry3.jpg" class="d-block mx-auto col-lg-9" height="500px" alt="..." object-fit
+      >
+      <div class="carousel-caption d-flex  flex-column justify-content-evenly">
+       <h5>STRESS-FREE LAUNDRY FOR CAMPUS LIFE</h5>
+        <p>Essence Laundry Services provides fast, affordable, and reliable laundry solutions for Rivers State University students, hostels, and offices. We pick up your dirty clothes, clean them with eco-friendly detergents, and deliver them fresh — so you can focus on your studies and work.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/essence_logo.png" class="d-block mx-auto col-lg-9" height="500px" alt="car-dashboard" object-fit
+      >
+      <div class="carousel-caption d-flex  flex-column justify-content-evenly">
+        <h5></h5>
+        <p>
+         </p>
+         <p><a href="#" class="btn mt-3 btn-large text-white fw-bold" > Read More</a></p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!--about section -->
+
+<section id="about" class="about-section-padding bg-white pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-12 col-12">
+        <div class="about-img">
+          <img src="assets/overwhelmed_student.png" alt="" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+        <div class="about-text">
+          <p class="display-6">
+           Get Peace of Mind with Your Laundry
+          </p>
+          <p class="lead text-black-80">
+            Living on campus shouldn’t mean struggling with dirty clothes or competing for overcrowded clothing lines. Essence Laundry Services offers a convenient, mobile laundry experience designed for students and busy professionals — from pickup to delivery, we’ve got you covered.</p>
+          <a href="#how_it_works" class="btn px-2 text-light mb-4 shadow"> How It Works</a>
+        </div>
+      </div>
+      </div>
+  </div>
+</section>
+
+<!--services-->
+<section id="services" class="services section-padding bg-white pt-5 py-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto text-center">
+        <h2 id="our-services" >Our Services</h2>
+        <p class="lead text-black-80">
+          At Essence Laundry Services, we handle your laundry with care, speed, and professionalism. Our services are tailored for students, hostels, and offices with recurring laundry needs. 
+          
+        </p>
+      </div>
+    </div>
+
+    <div class="row bg-transparent my-5">
+      <!--column for car tires-->
+      <div class="col-12 col-md-12 col-lg-4 mb-5">
+        <div class="card text-black-50  text-center pb-2 shadow">
+          <div class="card-body">
+        
+            <i class="bi bi-basket-fill"></i>
+<h3 class="card-title text-light"> Wash & Fold </h3>
+<p class="lead text-white-50 fs-5">
+  Perfect for everyday clothing. We carefully wash, dry, and neatly fold your clothes, ready for pickup or delivery.
+
+</p>
+<button class="btn card-body-btn bg-white text-body-black fw-bold">View Details</button>
+          </div>
+        </div>
+        
+      </div>
+      <!--column for car battries-->
+      <div class="col-12 col-md-12 col-lg-4 mb-5">
+        <div class="card text-black-50  text-center pb-2  shadow">
+          <div class="card-body">
+            <i class="bi bi-car-front-fill"></i>
+           <i class="bi bi-lightning-charge-fill"></i>
+<h3 class="card-title text-light"> Wash & Iron </h3>
+<p class="lead text-white-50 fs-5">
+  Ideal for lectures, work, and events. Your clothes are washed, professionally ironed, and delivered crisp and fresh.
+</p>
+<button class="btn card-body-btn bg-white text-body-black fw-bold"> View Details</button>
+          </div>
+        </div>
+        
+      </div>
+        <!--column for Tyres-->
+      <div class="col-12 col-md-12 col-lg-4 mb-5">
+        <div class="card text-black-50  text-center pb-2 shadow">
+          <div class="card-body">
+           <i class="bi bi-box-seam"></i>
+<h3 class="card-title text-light"> Dry Cleaning </h3>
+<p class="lead text-white-50 fs-5">
+Special care for Departmental Uniform, Casual wears, dresses, and delicate fabrics using safe, eco-friendly cleaning methods.
+</p>
+<button class="btn card-body-btn bg-white text-body-black fw-bold"> View Details</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Portforlio section-->
+<section id="portfolio" class="portfolio section-padding pt-0">
+  <div class="container p-0">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-header text-center col-md-8 mx-auto text-center our-projects mt-5">
+          <h2 id="how_it_works" class="my-5 ">How It Works</h2>
+           <p class="lead text-black mb-5 how_it_works_p">
+            Getting your laundry done with Essence is <span class="bg-success p-2 rounded text-white">simple</span>, <span class="bg-success p-2 rounded text-white">fast</span>,and <span class="bg-success p-2 rounded text-white">stress-free.</span>Just follow these easy steps.
+          </p>
+        </div>
+       
+      </div>
+    </div>
+    <div class="row our-projects-card">
+      <div class="col-12 col-md-12 col-lg-4  p-2 my-5">
+
+      <div class="card shadow text-center border-0 px-2">
+        <div class="card-body text-dark p-0  ">
+          <div class="img-area mb-4" >
+            <img src="assets/order_laundry.jpg" alt="" class="img-fluid our-projects-img rounded-circle" >
+
+          </div>
+          <h3 class="card-title fuse-box-h3">
+            Schedule Pickup
+          </h3>
+<p class="text-black-50 px-2">
+  Book your laundry pickup through WhatsApp, phone call, or our website. Choose a time that works for you.
+</p>
+<button class="btn text-white fw-bold  fuse-box-btn mb-3">
+  Learn More
+</button>
+        </div>
+      </div>
+      </div>
+      <div class="col-12 col-md-12 col-lg-4  p-2 my-5">
+
+      <div class="card shadow text-center border-0 px-2">
+        <div class="card-body text-dark p-0  ">
+          <div class="img-area mb-4" >
+            <img src="assets/student_laundry2.jpg" alt="" class="img-fluid our-projects-img rounded-circle" >
+
+          </div>
+          <h3 class="card-title fuse-box-h3">
+We Clean Your Clothes
+          </h3>
+<p class="text-black-50 px-2">
+  Your clothes are, sorted, carefuly tagged, washed, ironed, or dry-cleaned using quality, eco-friendly detergents.
+</p>
+<button class="btn text-white fw-bold  fuse-box-btn mb-3">
+  Learn More
+</button>
+        </div>
+      </div>
+      </div>
+      <div class="col-12 col-md-12 col-lg-4  p-2 my-5">
+
+      <div class="card shadow text-center border-0 px-2">
+        <div class="card-body text-dark p-0  ">
+          <div class="img-area mb-4" >
+            <img src="assets/order_delivery.jpg" alt="" class="img-fluid our-projects-img rounded-circle" >
+
+          </div>
+          <h3 class="card-title fuse-box-h3">
+        Fresh Delivery
+          </h3>
+<p class=" text-black-50 px-2">
+  We deliver your clean, fresh-smelling clothes back to you — neatly packaged and on time. 
+</p>
+<button class="btn text-white fw-bold  fuse-box-btn mb-3">
+  Learn More
+</button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="pricing" class="pricing section-padding bg-white pt-5 py-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto text-center">
+        <h2 id="our-services" class="">Student-Friendly Pricing</h2>
+        <p class="lead text-black-80">
+         Flexible laundry plans designed for students, hostels, and offices — pay per item or save more with weekly subscriptions.
+          
+        </p>
+      </div>
+    </div>
+
+    <div class="row bg-transparent my-5">
+      <!--column for pricing-->
+      <div class="col-12 col-md-12 col-lg-4 mb-5">
+        <div class="card text-black-50  text-center pb-0 shadow">
+          <div class="card-body card-title_pricing">
+            <!-- <i class="bi bi-lightning-charge-fill"></i> -->
+<h3 class="card-title text-success"> Pay Per Item </h3>
+<p class="text-dark fs-5">
+  Ideal for occasional laundry. Get your clothes washed, ironed, or dry-cleaned and pay only for what you bring.
+  <ul>
+  <li>Shirts, trousers, gowns and labcoats</li>
+  <li>we Wash, fold & iron</li>
+  <li>Dry cleaning for Departmental uniforms</li>
+  </ul>
+  
+
+</p>
+<button class="btn card-body-btn fw-bold"> <a href="https://wa.me/2348133352912" 
+class="book_pickup"> Book Pickup </a></button>
+          </div>
+        </div>
+        
+      </div>
+      <!--column for Weekly Student Plan-->
+      <div class="col-12 col-md-12 col-lg-4 mb-5">
+        <div class="card text-black-50  text-center pb-0  shadow">
+          <div class="card-body card-title_pricing">
+            <!-- <i class="bi bi-car-front-fill"></i>
+            <i class="bi bi-battery-charging"></i> -->
+<h3 class="card-title text-success"> Weekly Student Plan </h3>
+<p class="text-dark fs-5">
+  Perfect for students with recurring laundry needs. One flat weekly plan that covers your regular clothes — no stress, no surprises.
+  <ul>
+    <li>Weekly pickup & delivery </li>
+<li>Budget-friendly pricing
+</li> 
+<li>F & G Hostel pickups</li> 
+
+</li>
+  </ul>
+</p>
+<button class="btn card-body-btn bg-white text-body-black fw-bold"> subscribe now</button>
+          </div>
+        </div>
+        
+      </div>
+        <!--column for Hostel & Office Plans-->
+      <div class="col-12 col-md-12 col-lg-4 mb-5">
+        <div class="card text-black-50  text-center pb-0 shadow">
+          <div class="card-body card-title_pricing">
+            <!-- <i class="bi bi-droplet-fill"></i> -->
+<h3 class="card-title text-success"> Hostel & Office Plans </h3>
+<p class="text-dark fs-5">
+Reliable laundry solutions for hostels, offices, and shared apartments with bulk or recurring laundry needs.
+<ul>
+  <li>Bulk laundry handling</li> 
+
+<li> Flexible scheduling</li> 
+
+<li>Custom pricing based on volume</li> 
+</ul>
+</p>
+<button class="btn card-body-btn bg-white text-body-black fw-bold"> Contact Us</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Contact us-->
+ <section id="contact" class="contact section-padding col-md-12">
+<div class="container shadow p-4 mb-5 ">
+  <div class="row">
+    <div class="col-md-12 section-header text-center">
+      <h2 class="h2-contact-us text-light">Contact Us</h2>
+      </div>
+      </div>
+      
+        <form class="">
+          <div class="row">
+          <div class=" my-2 my-md-5 col-md-6">
+            <input type="name" class="form-control text-center" id="enterName"placeholder="Your Full Name">
+          </div>
+          <div class="my-2 my-md-5 col-md-6">
+            <input type="email" class="form-control text-center" id="enterEmail" aria-describedby="emailHelp" placeholder="Phone Number or Email">
+          </div>
+          <button type="submit" class="btn   col-6  mx-auto col-lg-3 bg-light text-center fw-bold shadow">Request Pickup</button>
+
+          </div>
+         
+         
+         
+        </form>
+      </div>
+      </div>
+    </div>
+  
+ </section>
+
+<!--Footer-->
+<section id="footer-section" class="footer-section section-padding col-md-12 mb-0 pb-0">
+<footer>
+  <div class="container footer_div d-flex 
+  flex-column justify-content-evenly pt-5">
+    <div class="row">
+      <div class="sub_section col-lg-3 col-sm-12 d-flex flex-column justify-content-evenly mb-4">
+        <h3>Quick Links</h3>
+        <ul>
+            <li> About Us</li>
+            <li> Pricing</li>
+            <li>FAQ</li>
+            <li>Book Pickup</li>
+            <li>Contact us</li>
+        </ul>
+      </div>
+
+      <div class="sub_section col-lg-3 col-sm-12 d-flex flex-column justify-content-evenly mb-4">
+        <h3>Services</h3>
+        <ul><li>Wash & Fold</li>
+            <li> Wash & Iron</li>
+            <li> Dry Cleaning</li>
+            <li>Express Service</li>
+            <li>Pickup & Delivery</li>
+        
+          
+        </ul>
+      </div>
+
+      <div class="sub_section col-lg-3 col-sm-12 d-flex flex-column justify-content-evenly mb-4">
+        <h3 id="contact">Contacts</h3>
+        <ul>
+            <li> Rivers State University, Port Harcourt</li>
+            <li>+234827185401</li>
+            <li>essencelaundry_NAPS3@gmail.com</li>
+        <li><a href="https://wa.me/2348133352912" 
+   style="position:fixed;bottom:100px;right:10px;
+   background:var(--text-on-primary);color:var(--primary);
+   padding:12px 18px;border-radius:50px;
+   font-weight:bold;text-decoration:none;
+   z-index:1000;">
+   Book on WhatsApp
+</a>
+</li>
+        </ul>
+      </div>
+
+      <div class="keepInTouch-Div sub_section  col-lg-3 col-sm-12 d-flex flex-column justify-content-around">
+        <div>
+          <h3>Keep IN Touch</h3>
+          <form action="#" class="d-flex bg-light my-4">
+          <input type="email" class="form-control" id="enterEmail" aria-describedby="emailHelp" placeholder="Your email">
+          <i class="bi bi-arrow-right-square fs-3"></i>
+          </form>
+        
+        </div>
+         
+      
+       
+         
+            <div class="follow-us">
+              <h3 class="">Follow Us</h3>
+              <div class="socials d-flex justify-content-evenly w-55">
+                <a href="https://x.com/jchinemenum"><i class="bi bi-twitter fs-3"  ></i> </a>
+                <i class="bi bi-facebook fs-3"></i>
+                <i class="bi bi-instagram fs-3"></i>
+                <i class="bi bi-envelope fs-3"></i>
+              </div>
+            </div>
+        
+        
+          </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-12">
+        <hr style="height:3.5px;border-width:0;background-color:rgb(255, 255, 255)">
+      </div>
+    </div>
+
+<div class="row">
+  <div class="col-md-12 text-center fw-bold">
+    <p id="copyright" class="col-lg-12 copyright">Copyright &#169; 2026 ENT Venture Studio</p>
+  </div>
+</div>
+</footer>
+</section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js">
+</script>
+</body>
+</html>
